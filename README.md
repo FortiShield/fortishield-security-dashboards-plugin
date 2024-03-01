@@ -1,7 +1,3 @@
-<div style="text-align:center">
-    <img src="https://fortishield.github.io/uploads/2022/05/Logo-blogpost.png"/>
-</div>
-
 # Fortishield Security Dashboards Plugin
 
 Fortishield Security Dashboards Plugin is a fork of the OpenSearch Dashboards Security Plugin which incorporate changes to make it easier to use for Fortishield users. Our aim is to contribute back any work not tied specifically to Fortishield.
