@@ -1,5 +1,5 @@
 <div style="text-align:center">
-    <img src="https://fortishield.github.io/uploads/2022/05/Logo-blogpost.png"/>
+    <img src="https://fortishield.com/uploads/2022/05/Logo-blogpost.png"/>
 </div>
 
 # Fortishield Security Dashboards Plugin
@@ -27,7 +27,7 @@ This plugin for Fortishield Dashboard adds a configuration management UI for the
 
 ## Installation
 
-The Fortishield Security Dashboards Plugin comes bundled by default as part of the Fortishield Dashboards distribution. Please refer to the [installation guide](https://fortishield.github.io/documentation/current/installation-guide/index.html).
+The Fortishield Security Dashboards Plugin comes bundled by default as part of the Fortishield Dashboards distribution. Please refer to the [installation guide](https://documentation.fortishield.com/current/installation-guide/index.html).
 
 ## Contributing
 
@@ -37,7 +37,7 @@ See [developer guide](DEVELOPER_GUIDE.md) and [how to contribute to this project
 
 If you find a bug, or have a feature request, please don't hesitate to open an issue in this repository.
 
-For more information, see [project website](https://fortishield.github.io/) and [documentation](https://fortishield.github.io/documentation/current/index.html). If you need help and are unsure where to open an [issue](https://github.com/fortishield/fortishield-security-dashboards-plugin/issues).
+For more information, see [project website](https://fortishield.com/) and [documentation](https://documentation.fortishield.com/current/index.html). If you need help and are unsure where to open an [issue](https://github.com/fortishield/fortishield-security-dashboards-plugin/issues).
 
 ## Security
 
