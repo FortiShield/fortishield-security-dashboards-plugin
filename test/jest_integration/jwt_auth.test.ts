@@ -219,8 +219,8 @@ describe('start OpenSearch Dashboards server', () => {
     // shutdown OpenSearchDashboards server
     await root.shutdown();
   });
-
-  it('Login to app/opensearch_dashboards_overview#/ when JWT is enabled', async () => {
+  // Fortishield: Skip test because overview page is disabled
+  it.skip('Login to app/opensearch_dashboards_overview#/ when JWT is enabled', async () => {
     const payload = {
       sub: 'jwt_test',
       roles: 'admin,kibanauser',
@@ -234,7 +234,7 @@ describe('start OpenSearch Dashboards server', () => {
       .sign(key);
     const driver = getDriver(browser, options).build();
     await driver.get(`http://localhost:5601/app/opensearch_dashboards_overview?token=${token}`);
-    await driver.wait(until.elementsLocated(By.xpath(pageTitleXPath)), 10000);
+    await driver.wait(until.elementsLocated(By.xpath(pageTitleXPath)), 15000);
 
     const cookie = await driver.manage().getCookies();
     expect(cookie.length).toEqual(2);
@@ -259,7 +259,7 @@ describe('start OpenSearch Dashboards server', () => {
 
     await driver.wait(
       until.elementsLocated(By.xpath('//*[@data-test-subj="sendRequestButton"]')),
-      10000
+      15000
     );
 
     const cookie = await driver.manage().getCookies();
@@ -267,8 +267,8 @@ describe('start OpenSearch Dashboards server', () => {
     await driver.manage().deleteAllCookies();
     await driver.quit();
   });
-
-  it('Login to app/opensearch_dashboards_overview#/ when JWT is enabled with invalid token', async () => {
+  // Fortishield: Skip test because overview page is disabled
+  it.skip('Login to app/opensearch_dashboards_overview#/ when JWT is enabled with invalid token', async () => {
     const payload = {
       sub: 'jwt_test',
       roles: 'admin,kibanauser',
@@ -294,8 +294,8 @@ describe('start OpenSearch Dashboards server', () => {
     await driver.manage().deleteAllCookies();
     await driver.quit();
   });
-
-  it('Login to app/dev_tools#/console when JWT is enabled with invalid token', async () => {
+  // Fortishield: Skip test because this issue https://github.com/opensearch-project/security-dashboards-plugin/issues/1540
+  it.skip('Login to app/dev_tools#/console when JWT is enabled with invalid token', async () => {
     const payload = {
       sub: 'jwt_test',
       roles: 'admin,kibanauser',

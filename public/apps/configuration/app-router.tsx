@@ -35,7 +35,6 @@ import { RoleEditMappedUser } from './panels/role-mapping/role-edit-mapped-user'
 import { RoleView } from './panels/role-view/role-view';
 import { TenantList } from './panels/tenant-list/tenant-list';
 import { UserList } from './panels/user-list';
-import { ServiceAccountList } from './panels/service-account-list';
 import { Action, RouteItem, SubAction } from './types';
 import { ResourceType } from '../../../common';
 import { buildHashUrl, buildUrl } from './utils/url-builder';
@@ -55,10 +54,6 @@ const ROUTE_MAP: { [key: string]: RouteItem } = {
   [ResourceType.users]: {
     name: 'Internal users',
     href: buildUrl(ResourceType.users),
-  },
-  [ResourceType.serviceAccounts]: {
-    name: 'Service Accounts',
-    href: buildUrl(ResourceType.serviceAccounts),
   },
   [ResourceType.permissions]: {
     name: 'Permissions',
@@ -91,7 +86,6 @@ const ROUTE_LIST = [
   ROUTE_MAP[ResourceType.auth],
   ROUTE_MAP[ResourceType.roles],
   ROUTE_MAP[ResourceType.users],
-  ROUTE_MAP[ResourceType.serviceAccounts],
   ROUTE_MAP[ResourceType.permissions],
   ROUTE_MAP[ResourceType.tenants],
   ROUTE_MAP[ResourceType.auditLogging],
@@ -214,13 +208,6 @@ export function AppRouter(props: AppDependencies) {
               render={() => {
                 setGlobalBreadcrumbs(ResourceType.users);
                 return <UserList {...props} />;
-              }}
-            />
-            <Route
-              path={ROUTE_MAP.serviceAccounts.href}
-              render={() => {
-                setGlobalBreadcrumbs(ResourceType.serviceAccounts);
-                return <ServiceAccountList {...props} />;
               }}
             />
             <Route

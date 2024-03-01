@@ -3,7 +3,7 @@ description: 'Installs OpenSearch Dashboard with a Plugin from github, then chec
 
 inputs:
   opensearch-version:
-    description: 'The version of OpenSearch that should be used, e.g "3.0.0"'
+    description: 'The version of OpenSearch that should be used, e.g "2.6.0"'
     required: true
 
   plugin-name:
@@ -11,7 +11,7 @@ inputs:
     required: true
 
   plugin-version:
-    description: 'The version of security plugin that should be used, e.g "3.0.0.0"'
+    description: 'The version of security plugin that should be used, e.g "2.6.0.0"'
     required: true
 
 runs:
